@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undangan Pernikahan - Ahmad & Siti</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- File CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="min-h-screen">
+    <div class="wrapper overflow-hidden">
+      <!-- Music Player - button -->
+      <div class="music-player" id="musicPlayer" onclick="toggleMusic()">
+        <i class="fas fa-music" id="musicIcon"></i>
+      </div>
+
+      <!-- Audio -->
+      <audio id="backgroundMusic" loop>
+        <source src="assets/music/UNTUKKU - Chrisye Musica Official.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+
+      <!-- Hero Section -->
+      <section id="opening" class="hero-bg flex items-center justify-center relative">
+        <!-- Container - Cover -->
+        <img src="assets/images/flower-1-45d-(2).png" alt="flower" class="flower-left absolute z-[10] bottom-0" />
+        <img src="assets/images/flower-1-45d.png" alt="flower" class="flower-right absolute z-[10] bottom-0" />
+        <div
+          class="container min-h-screen m-auto mx-auto px-4 text-center flex items-center justify-center"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-offset="300"
+        >
+          <div class="card-elegant rounded-3xl p-8 md:p-12 max-w-2xl m-auto">
+            <div class="ornament floating">❀</div>
+            <h1 class="dancing-script text-4xl md:text-6xl font-bold text-yellow-600 mb-4">Kevin & Adeline</h1>
+            <div class="ornament">◆ ◇ ◆</div>
+            <p class="text-lg md:text-xl text-gray-700 mb-6">
+              Dengan penuh rasa syukur, kami mengundang Anda untuk hadir dalam perayaan pernikahan kami
+            </p>
+            <div class="text-yellow-600 text-lg font-semibold mb-8">Sabtu, 21 Juni 2025</div>
+            <button
+              onclick="openInvitation()"
+              class="btn-elegant text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300"
+            >
+              Buka Undangan
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Content (Initially Hidden) -->
+      <div id="mainContent" style="display: none">
+        <!-- Quotes Section -->
+        <section id="quotes" class="">
+          <div class="container min-h-screen m-auto mx-auto px-4 text-center flex items-center justify-center">
+            <div class="card-quotes rounded-3xl p-8 md:p-12 max-w-2xl" data-aos="fade-up" data-aos-duration="1000">
+              <div class="ornament">❀</div>
+              <h1 class="text-lg font-bold text-yellow-600">Assalamualaikum Wr.Wb</h1>
+              <p>
+                Tanpa mengurangi Tanpa mengurangi rasa hormat, kami bermaksud mengundang Bapak/Ibu/Saudara/i pada acara resepsi pernikahan:
+              </p>
+              <h2 class="dancing-script text-4xl md:text-6xl font-bold text-yellow-600 my-8">
+                Kevin <br />
+                & <br />
+                Adeline
+              </h2>
+
+              <p class="text-center">
+                "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu
+                cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian
+                itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
+              </p>
+              <p class="font-bold text-l">Q.S Ar-Rum ayat 21</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Couple Section -->
+        <section class="py-8 hero-bg" id="couple">
+          <div class="container mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100">
+              <div class="ornament floating">❀</div>
+              <h2 class="dancing-script text-4xl md:text-5xl font-bold text-yellow-600 mb-4">Mempelai</h2>
+              <div class="section-divider"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 sm:w-[90%] xl:w-[80%] mx-auto">
+              <!-- Groom -->
+              <div class="text-center" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="250">
+                <div class="card-elegant rounded-2xl p-8 mb-6">
+                  <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-yellow-400">
+                    <img src="assets/images/xcurute.png" alt="Ahmad" class="w-full h-full object-cover" />
+                  </div>
+                  <h3 class="dancing-script text-3xl font-bold text-yellow-600 mb-2">Kevin Susanto</h3>
+                  <p class="text-gray-600 mb-4">Putra dari</p>
+                  <p class="font-semibold text-gray-800">Bapak Luis & Ibu Lidya</p>
+                  <!-- icon ig -->
+                  <a href="https://www.instagram.com/xccuratevlr/" target="_blank"><i class="fa-brands fa-instagram text-2xl mt-5"></i></a>
+                </div>
+              </div>
+
+              <!-- Bride -->
+              <div class="text-center">
+                <div class="card-elegant rounded-2xl p-8 mb-6" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="250">
+                  <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-yellow-400">
+                    <img src="assets/images/Nastasia-Adeline.png" alt="Siti" class="w-full h-full object-cover" />
+                  </div>
+                  <h3 class="dancing-script text-3xl font-bold text-yellow-600 mb-2">Nastasia Adeline</h3>
+                  <p class="text-gray-600 mb-4">Putri dari</p>
+                  <p class="font-semibold text-gray-800">Bapak Jonathan & Ibu Monica</p>
+                  <!-- icon ig -->
+                  <a href="https://www.instagram.com/abcdeline___/" target="_blank"><i class="fa-brands fa-instagram text-2xl mt-5"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Event Details Section -->
+        <section class="py-8" id="event">
+          <div class="container mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100">
+              <div class="ornament">❀</div>
+              <h2 class="dancing-script text-4xl md:text-5xl font-bold text-yellow-600 mb-4">Acara</h2>
+              <div class="section-divider"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 sm:w-[90%] xl:w-[80%] mx-auto">
+              <!-- Akad Nikah -->
+              <div class="card-elegant rounded-2xl p-8 text-center" data-aos="flip-right" data-aos-duration="1000" data-aos-offset="200">
+                <div class="text-yellow-600 text-4xl mb-4">
+                  <!-- <img src="assets/icons/ring-wedding.svg" alt="" /> -->
+                  <svg class="mx-auto" width="45" height="36" viewBox="0 0 416 354" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M88.6886 138.346C96.0204 135.066 102.778 132.996 110.309 131.756L145.974 77.2324L112.474 54.7324L42.4744 77.2324L26.9744 114.232L88.6886 138.346ZM80.4744 124.232L49.9744 111.732L64.9744 107.232L80.4744 124.232ZM63.4744 82.2324L61.9744 97.7324L43.9744 101.732L49.9744 86.2324L63.4744 82.2324ZM96.4744 125.232L76.9744 103.732L98.4744 97.7324L96.4744 125.232ZM96.4744 86.2324L73.9744 93.7324V77.2324L86.4744 74.2324L96.4744 86.2324ZM108.474 82.2324L98.4744 71.2324L111.474 66.2324L125.974 77.2324L108.474 82.2324ZM125.974 89.2324L111.474 93.7324L109.474 114.232L125.974 89.2324Z"
+                      fill="#d08700"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M77.9744 143.732C30.0298 170.1 10.7949 221.962 26.9744 274.232C41.7814 322.069 77.9286 351.508 127.974 353.232C174.251 354.827 211.52 331.079 230.112 290.952C232.566 285.657 234.694 280.077 236.474 274.232C237.156 271.995 237.75 269.745 238.26 267.486C247.065 228.444 230.515 186.707 201.366 159.637C195.023 153.746 188.083 148.55 180.678 144.227C164.814 134.967 146.815 129.715 127.974 130.232C121.377 130.414 115.649 130.876 110.309 131.756L102.474 143.732L88.6886 138.346C85.2857 139.868 81.7592 141.651 77.9744 143.732ZM127.974 330.232C90.8827 327.643 63.9421 308.691 49.9744 274.232C37.4086 243.232 45.0446 196.239 77.9744 170.232C94.3671 157.286 107.126 152.527 127.974 151.232C144.563 150.202 160.828 154.524 175.106 162.64C183.252 167.271 190.751 173.137 197.294 179.949C215.846 199.265 226.714 226.189 222.853 254.135C221.931 260.806 220.17 267.535 217.474 274.232C216.738 276.061 215.851 277.937 214.823 279.842C201.793 303.99 166.096 332.894 127.974 330.232Z"
+                      fill="#d08700"
+                    />
+                    <path
+                      d="M110.309 131.756C102.778 132.996 96.0204 135.066 88.6886 138.346L102.474 143.732L110.309 131.756Z"
+                      fill="#d08700"
+                    />
+                    <path
+                      d="M67.4744 50.7324C69.4744 49.9324 75.3077 48.3991 77.9744 47.7324L63.4744 1.23242L52.4744 4.23242L67.4744 50.7324Z"
+                      fill="#d08700"
+                    />
+                    <path d="M42.9744 66.7324L1.47438 46.2324L7.97438 35.2324L48.4744 57.2324L42.9744 66.7324Z" fill="#d08700" />
+                    <path d="M96.4744 42.7324L104.474 47.7324L127.974 6.23242L119.474 1.23242L96.4744 42.7324Z" fill="#d08700" />
+                    <path
+                      d="M236.474 274.232C234.694 280.077 232.566 285.657 230.112 290.952C249.087 302.59 271.516 309.128 295.474 308.732C360.774 307.653 412.586 256.514 414.474 191.232C416.42 124.003 362.723 67.8437 295.474 66.7324C243.68 65.8765 198.604 98.5924 180.678 144.227C188.083 148.55 195.023 153.746 201.366 159.637C213.951 119.999 251.798 90.8275 295.474 91.7324C349.052 92.8426 391.64 137.669 389.974 191.232C388.361 243.123 347.379 283.657 295.474 284.732C274.216 285.173 254.436 278.753 238.26 267.486C237.75 269.745 237.156 271.995 236.474 274.232Z"
+                      fill="#d08700"
+                    />
+                    <path
+                      d="M214.823 279.842C215.851 277.937 216.738 276.061 217.474 274.232C220.17 267.535 221.931 260.806 222.853 254.135C207.432 237.623 197.733 215.638 196.974 191.232C196.856 187.425 196.967 183.659 197.294 179.949C190.751 173.137 183.252 167.271 175.106 162.64C173.114 171.851 172.191 181.428 172.474 191.232C173.506 226.879 189.735 258.431 214.823 279.842Z"
+                      fill="#d08700"
+                    />
+                    <path
+                      d="M88.6886 138.346C96.0204 135.066 102.778 132.996 110.309 131.756M88.6886 138.346L26.9744 114.232L42.4744 77.2324L112.474 54.7324L145.974 77.2324L110.309 131.756M88.6886 138.346L102.474 143.732L110.309 131.756M88.6886 138.346C85.2857 139.868 81.7592 141.651 77.9744 143.732C30.0298 170.1 10.7949 221.962 26.9744 274.232C41.7814 322.069 77.9286 351.508 127.974 353.232C174.251 354.827 211.52 331.079 230.112 290.952M110.309 131.756C115.649 130.876 121.377 130.414 127.974 130.232C146.815 129.715 164.814 134.967 180.678 144.227M230.112 290.952C232.566 285.657 234.694 280.077 236.474 274.232C237.156 271.995 237.75 269.745 238.26 267.486M230.112 290.952C249.087 302.59 271.516 309.128 295.474 308.732C360.774 307.653 412.586 256.514 414.474 191.232C416.42 124.003 362.723 67.8437 295.474 66.7324C243.68 65.8765 198.604 98.5924 180.678 144.227M230.112 290.952C224.723 287.646 219.612 283.929 214.823 279.842M180.678 144.227C188.083 148.55 195.023 153.746 201.366 159.637M180.678 144.227C178.346 150.162 176.474 156.314 175.106 162.64M201.366 159.637C213.951 119.999 251.798 90.8275 295.474 91.7324C349.052 92.8426 391.64 137.669 389.974 191.232C388.361 243.123 347.379 283.657 295.474 284.732C274.216 285.173 254.436 278.753 238.26 267.486M201.366 159.637C230.515 186.707 247.065 228.444 238.26 267.486M201.366 159.637C199.297 166.154 197.911 172.954 197.294 179.949M238.26 267.486C232.664 263.588 227.498 259.11 222.853 254.135M214.823 279.842C215.851 277.937 216.738 276.061 217.474 274.232C220.17 267.535 221.931 260.806 222.853 254.135M214.823 279.842C189.735 258.431 173.506 226.879 172.474 191.232C172.191 181.428 173.114 171.851 175.106 162.64M214.823 279.842C201.793 303.99 166.096 332.894 127.974 330.232C90.8827 327.643 63.9421 308.691 49.9744 274.232C37.4086 243.232 45.0446 196.239 77.9744 170.232C94.3671 157.286 107.126 152.527 127.974 151.232C144.563 150.202 160.828 154.524 175.106 162.64M222.853 254.135C207.432 237.623 197.733 215.638 196.974 191.232C196.856 187.425 196.967 183.659 197.294 179.949M222.853 254.135C226.714 226.189 215.846 199.265 197.294 179.949M197.294 179.949C190.751 173.137 183.252 167.271 175.106 162.64M49.9744 111.732L80.4744 124.232L64.9744 107.232L49.9744 111.732ZM61.9744 97.7324L63.4744 82.2324L49.9744 86.2324L43.9744 101.732L61.9744 97.7324ZM76.9744 103.732L96.4744 125.232L98.4744 97.7324L76.9744 103.732ZM73.9744 93.7324L96.4744 86.2324L86.4744 74.2324L73.9744 77.2324V93.7324ZM98.4744 71.2324L108.474 82.2324L125.974 77.2324L111.474 66.2324L98.4744 71.2324ZM111.474 93.7324L125.974 89.2324L109.474 114.232L111.474 93.7324ZM42.9744 66.7324L1.47438 46.2324L7.97438 35.2324L48.4744 57.2324L42.9744 66.7324ZM67.4744 50.7324C69.4744 49.9324 75.3077 48.3991 77.9744 47.7324L63.4744 1.23242L52.4744 4.23242L67.4744 50.7324ZM96.4744 42.7324L104.474 47.7324L127.974 6.23242L119.474 1.23242L96.4744 42.7324Z"
+                      stroke="white"
+                    />
+                  </svg>
+                </div>
+                <h3 class="dancing-script text-2xl font-bold text-yellow-600 mb-4">Akad Nikah</h3>
+                <div class="space-y-2 text-gray-700">
+                  <p><i class="fas fa-calendar-alt text-yellow-600 mr-2"></i>Sabtu, 21 Juni 2025</p>
+                  <p><i class="fas fa-clock text-yellow-600 mr-2"></i>08:00 - 10:00 Wita</p>
+                  <p><i class="fas fa-map-marker-alt text-yellow-600 mr-2"></i>The Grove Suites by GRAND ASTON</p>
+                  <p class="text-sm w-[70%] m-auto">
+                    Kawasan Rasuna Epicentrum, Jl. H. R. Rasuna Said, Kuningan, Setiabudi, South Jakarta City, Jakarta 12960
+                  </p>
+                </div>
+                <button onclick="openMap('akad')" class="btn-elegant text-white px-6 py-2 rounded-full mt-6 text-sm">Lihat Lokasi</button>
+                <div id="map-akad"></div>
+              </div>
+
+              <!-- Resepsi -->
+              <div class="card-elegant rounded-2xl p-8 text-center" data-aos="flip-left" data-aos-duration="1000" data-aos-offset="200">
+                <div class="text-yellow-600 text-4xl mb-4">
+                  <i class="fas fa-glass-cheers"></i>
+                </div>
+                <h3 class="dancing-script text-2xl font-bold text-yellow-600 mb-4">Resepsi</h3>
+                <div class="space-y-2 text-gray-700">
+                  <p><i class="fas fa-calendar-alt text-yellow-600 mr-2"></i>Minggu, 22 Juni 2025</p>
+                  <p><i class="fas fa-clock text-yellow-600 mr-2"></i>10:00 - 15:00 Wita</p>
+                  <p><i class="fas fa-map-marker-alt text-yellow-600 mr-2"></i>Stadion Utama Gelora Bung Karno</p>
+                  <p class="text-sm w-[70%] m-auto">
+                    Jl. Pintu Satu Senayan, Gelora, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270
+                  </p>
+                </div>
+                <button onclick="openMap('resepsi')" class="btn-elegant text-white px-6 py-2 rounded-full mt-6 text-sm">
+                  Lihat Lokasi
+                </button>
+                <div id="map-resepsi"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Countdown Section -->
+        <section class="py-16 hero-bg" id="countdown">
+          <div class="container mx-auto px-4 text-center">
+            <div class="">
+              <div class="ornament floating" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100">❀</div>
+              <h2
+                class="dancing-script text-4xl md:text-5xl font-bold text-yellow-600 mb-8"
+                data-aos="fade-up"
+                data-aos-duration="800"
+                data-aos-offset="100"
+              >
+                Menuju Hari Bahagia
+              </h2>
+              <div
+                class="flex flex-wrap justify-center"
+                id="countdownTimer"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-offset="100"
+              >
+                <div class="countdown-box">
+                  <div class="text-2xl font-bold" id="days">00</div>
+                  <div class="text-sm">Hari</div>
+                </div>
+                <div class="countdown-box">
+                  <div class="text-2xl font-bold" id="hours">00</div>
+                  <div class="text-sm">Jam</div>
+                </div>
+                <div class="countdown-box">
+                  <div class="text-2xl font-bold" id="minutes">00</div>
+                  <div class="text-sm">Menit</div>
+                </div>
+                <div class="countdown-box">
+                  <div class="text-2xl font-bold" id="seconds">00</div>
+                  <div class="text-sm">Detik</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="py-16" id="gallery">
+          <div class="container mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100">
+              <div class="ornament">❀</div>
+              <h2 class="dancing-script text-4xl md:text-5xl font-bold text-yellow-600 mb-4">Galeri</h2>
+              <div class="section-divider"></div>
+            </div>
+
+            <div
+              class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 w-[80%] mx-auto"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-offset="200"
+            >
+              <!-- foto 1 -->
+              <div class="gallery-item" onclick="openImages('assets/images/galeri-1.png')">
+                <img src="assets/images/galeri-1.png" alt="Gallery 1" class="w-full h-40 object-cover cursor-pointer" />
+              </div>
+              <!-- foto 2 -->
+              <div class="gallery-item" onclick="openImages('assets/images/galeri-2.png')">
+                <img src="assets/images/galeri-2.png" alt="Gallery 2" class="w-full h-40 object-cover cursor-pointer" />
+              </div>
+              <!-- foto 3 -->
+              <div class="gallery-item" onclick="openImages('assets/images/galeri-3.png')">
+                <img src="assets/images/galeri-3.png" alt="Gallery 3" class="w-full h-40 object-cover cursor-pointer" />
+              </div>
+              <!-- foto 4 -->
+              <div class="gallery-item" onclick="openImages('assets/images/galeri-4.png')">
+                <img src="assets/images/galeri-4.png" alt="Gallery 4" class="w-full h-40 object-cover cursor-pointer" />
+              </div>
+              <!-- foto 5 -->
+              <div class="gallery-item" onclick="openImages('assets/images/galeri-5.png')">
+                <img src="assets/images/galeri-5.png" alt="Gallery 4" class="w-full h-40 object-cover cursor-pointer" />
+              </div>
+              <!-- foto 6 -->
+              <div class="gallery-item" onclick="openImages('assets/images/galeri-6.png')">
+                <img src="assets/images/galeri-6.png" alt="Gallery 4" class="w-full h-40 object-cover cursor-pointer" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- RSVP Section -->
+        <section class="py-8 hero-bg" id="rsvp">
+          <div class="container mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="800" data-aos-offset="100">
+              <div class="ornament floating">❀</div>
+              <h2 class="dancing-script text-4xl md:text-5xl font-bold text-yellow-600 mb-4">Konfirmasi Kehadiran</h2>
+              <div class="section-divider"></div>
+            </div>
+
+            <div class="max-w-lg mx-auto">
+              <div class="card-elegant rounded-2xl p-8" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="100">
+                <form id="rsvpForm">
+                  <div class="mb-4">
+                    <label class="block text-gray-700 font-semibold mb-2">Nama Lengkap</label>
+                    <input
+                      type="text"
+                      id="guestName"
+                      class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-500"
+                      required
+                    />
+                  </div>
+                  <div class="mb-4">
+                    <label class="block text-gray-700 font-semibold mb-2">Kehadiran</label>
+                    <select
+                      id="attendance"
+                      class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-500"
+                      required
+                    >
+                      <option value="">Pilih kehadiran</option>
+                      <option value="hadir">Hadir</option>
+                      <option value="tidak-hadir">Tidak Hadir</option>
+                    </select>
+                  </div>
+                  <div class="mb-6">
+                    <label class="block text-gray-700 font-semibold mb-2">Ucapan & Doa</label>
+                    <textarea
+                      id="message"
+                      rows="4"
+                      class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-500"
+                      placeholder="Tuliskan ucapan dan doa untuk kedua mempelai..."
+                    ></textarea>
+                  </div>
+                  <button type="submit" class="btn-elegant text-white px-8 py-3 rounded-full font-semibold w-full">Kirim Konfirmasi</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-8 text-center" id="footer">
+          <div class="container mx-auto px-4" data-aos="zoom-in" data-aos-duration="800" data-aos-offset="50">
+            <div class="ornament">❀</div>
+            <p class="dancing-script text-2xl text-yellow-600 mb-2">Kevin & Adeline</p>
+            <p class="text-gray-600 mb-4">Terima kasih atas kehadiran dan doa restu Anda</p>
+            <div class="ornament">◆ ◇ ◆</div>
+          </div>
+        </footer>
+      </div>
+
+      <!-- Klik img for Gallery -->
+      <div id="openImage" class="opnImg">
+        <span class="close">&times;</span>
+        <div class="opnImg-content">
+          <img id="imageOpen" style="width: 100%; height: auto" />
+        </div>
+      </div>
+
+      <!-- Bottom Navbar -->
+      <nav id="navbar" class="hidden fixed bottom-0 left-0 right-0 z-50 bg-white border border-black border-solid shadow-md">
+        <div class="flex justify-around items-center h-20 max-w-md mx-auto">
+          <!-- Cover -->
+          <a href="#opening" class="nav-link flex flex-col items-center text-gray-700 font-semibold text-xs active">
+            <i class="fas fa-envelope text-lg"></i>
+            Opening
+          </a>
+          <!-- Quotes -->
+          <a href="#quotes" class="nav-link flex flex-col items-center text-gray-700 text-xs">
+            <i class="fas fa-quote-left text-lg"></i>
+            Quotes
+          </a>
+          <!-- Mempelai -->
+          <a href="#couple" class="nav-link flex flex-col items-center text-gray-700 text-xs">
+            <i class="fas fa-heart text-lg"></i>
+            Couple
+          </a>
+          <!-- Acara -->
+          <a href="#event" class="nav-link flex flex-col items-center text-gray-700 text-xs">
+            <i class="fa-solid fa-calendar text-lg"></i>
+            Akad
+          </a>
+          <!-- Gallery -->
+          <a href="#gallery" class="nav-link flex flex-col items-center text-gray-700 text-xs">
+            <i class="fa-solid fa-images text-lg"></i>
+            Gallery
+          </a>
+
+          <!-- RSVP -->
+          <a href="#rsvp" class="nav-link flex flex-col items-center text-gray-700 text-xs hover:text-yellow-600">
+            <i class="fas fa-calendar-check text-lg"></i>
+            RSVP
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Script -->
+    <script src="js/script.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Initialize -->
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
