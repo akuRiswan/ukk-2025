@@ -182,29 +182,30 @@ function buatBunga() {
 
 // Interval untuk membuat bunga terus menerus
 setInterval(buatBunga, 400);
+
 // Navbar hide/show on scroll
-// let lastScrollTop = 0;
-// function handleNavbarScroll() {
-//   const navbar = document.getElementById("navbar");
-//   const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+let lastScrollTop = 0;
+function handleNavbarScroll() {
+  const navbar = document.getElementById("navbar");
+  const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-//   if (currentScrollTop > lastScrollTop && currentScrollTop > 100) {
-//     // Scrolling down
-//     navbar.classList.add("navbar-hidden");
-//     navbar.classList.remove("navbar-visible");
-//   } else {
-//     // Scrolling up
-//     navbar.classList.remove("navbar-hidden");
-//     navbar.classList.add("navbar-visible");
-//   }
+  if (currentScrollTop > lastScrollTop && currentScrollTop > 100) {
+    // Scrolling down
+    navbar.classList.add("navbar-hidden");
+    navbar.classList.remove("navbar-visible");
+  } else {
+    // Scrolling up
+    navbar.classList.remove("navbar-hidden");
+    navbar.classList.add("navbar-visible");
+  }
 
-//   lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
-//   updateActiveNavLink();
-// }
+  lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+  updateActiveNavLink();
+}
 
 // Add scroll event listener
-// window.addEventListener("scroll", handleNavbarScroll);
-window.addEventListener("scroll", updateActiveNavLink);
+window.addEventListener("scroll", handleNavbarScroll);
+// window.addEventListener("scroll", updateActiveNavLink);
 
 // Add loading animation
 window.addEventListener("load", function () {
