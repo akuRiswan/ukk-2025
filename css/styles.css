@@ -105,6 +105,7 @@ body {
   box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
 
+/* Gallery - images - img */
 .gallery-item {
   transition: all 0.3s ease;
   border-radius: 15px;
@@ -117,6 +118,7 @@ body {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
+/* Music Player */
 .music-player {
   position: fixed;
   bottom: 100px;
